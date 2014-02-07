@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3985EB7D-735F-4D70-AD0A-90CC9180FC89}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectA</RootNamespace>
+    <AssemblyName>ProjectA</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\EditDashboardController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Global.asax" />
+    <Content Include="jquery\bootstrap-3.0.3-dist\dist\css\bootstrap-theme.css" />
+    <Content Include="jquery\bootstrap-3.0.3-dist\dist\css\bootstrap-theme.min.css" />
+    <Content Include="jquery\bootstrap-3.0.3-dist\dist\css\bootstrap.css" />
+    <Content Include="jquery\bootstrap-3.0.3-dist\dist\css\bootstrap.min.css" />
+    <Content Include="jquery\bootstrap-3.0.3-dist\dist\js\bootstrap.js" />
+    <Content Include="jquery\bootstrap-3.0.3-dist\dist\js\bootstrap.min.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\images\animated-overlay.gif" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\jquery-ui-1.10.4.custom.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\css\smoothness\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\AUTHORS.txt" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\demos.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\draggable\constrain-movement.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\draggable\cursor-style.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\draggable\default.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\draggable\delay-start.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\draggable\events.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\draggable\handle.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\draggable\index.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\draggable\revert.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\draggable\scroll.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\draggable\snap-to.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\draggable\sortable.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\draggable\visual-feedback.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\accepted-elements.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\default.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\images\high_tatras.jpg" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\images\high_tatras2.jpg" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\images\high_tatras2_min.jpg" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\images\high_tatras3.jpg" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\images\high_tatras3_min.jpg" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\images\high_tatras4.jpg" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\images\high_tatras4_min.jpg" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\images\high_tatras_min.jpg" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\index.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\photo-manager.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\propagation.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\revert.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\shopping-cart.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\droppable\visual-feedback.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\images\calendar.gif" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\images\demo-config-on-tile.gif" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\images\demo-config-on.gif" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\images\demo-spindown-closed.gif" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\images\demo-spindown-open.gif" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\images\icon-docs-info.gif" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\images\pbar-ani.gif" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\index.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\position\cycler.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\position\default.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\position\images\earth.jpg" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\position\images\flight.jpg" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\position\images\rocket.jpg" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\position\index.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\resizable\animate.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\resizable\aspect-ratio.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\resizable\constrain-area.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\resizable\default.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\resizable\delay-start.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\resizable\helper.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\resizable\index.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\resizable\max-min.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\resizable\snap-to-grid.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\resizable\synchronous-resize.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\resizable\textarea.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\resizable\visual-feedback.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\selectable\default.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\selectable\display-grid.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\selectable\index.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\selectable\serialize.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\sortable\connect-lists-through-tabs.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\sortable\connect-lists.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\sortable\default.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\sortable\delay-start.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\sortable\display-grid.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\sortable\empty-lists.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\sortable\index.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\sortable\items.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\sortable\placeholder.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\sortable\portlets.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\widget\default.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\demos\widget\index.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\docs\draggable.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\docs\droppable.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\docs\jQuery.widget.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\docs\mouse.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\docs\position.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\docs\resizable.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\docs\selectable.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\docs\sortable.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\external\globalize.culture.de-DE.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\external\globalize.culture.ja-JP.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\external\globalize.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\external\jquery.mousewheel.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\external\jshint.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\external\qunit.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\external\qunit.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\Gruntfile.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\jquery-1.10.2.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\MIT-LICENSE.txt" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\images\animated-overlay.gif" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\jquery-ui.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\jquery.ui.all.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\jquery.ui.base.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\jquery.ui.core.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\jquery.ui.resizable.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\jquery.ui.selectable.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\jquery.ui.theme.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\images\animated-overlay.gif" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\images\animated-overlay.gif" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\jquery-ui.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\jquery.ui.all.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\jquery.ui.base.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\jquery.ui.core.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\jquery.ui.resizable.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\jquery.ui.selectable.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\jquery.ui.theme.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\images\animated-overlay.gif" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\jquery-ui.min.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\jquery.ui.core.min.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\jquery.ui.resizable.min.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\jquery.ui.selectable.min.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\themes\smoothness\minified\jquery.ui.theme.min.css" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\jquery-ui.custom.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\jquery.ui.core.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\jquery.ui.draggable.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\jquery.ui.droppable.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\jquery.ui.mouse.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\jquery.ui.position.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\jquery.ui.resizable.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\jquery.ui.selectable.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\jquery.ui.sortable.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\jquery.ui.widget.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\minified\jquery-ui.custom.min.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\minified\jquery.ui.core.min.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\minified\jquery.ui.draggable.min.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\minified\jquery.ui.droppable.min.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\minified\jquery.ui.mouse.min.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\minified\jquery.ui.position.min.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\minified\jquery.ui.resizable.min.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\minified\jquery.ui.selectable.min.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\minified\jquery.ui.sortable.min.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui\minified\jquery.ui.widget.min.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\index.html" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\js\jquery-1.10.2.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\js\jquery-ui-1.10.4.custom.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\js\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EditDashboard\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_layoutMaster.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\package.json" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\README.md" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui.core.jquery.json" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui.draggable.jquery.json" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui.droppable.jquery.json" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui.mouse.jquery.json" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui.position.jquery.json" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui.resizable.jquery.json" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui.selectable.jquery.json" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui.sortable.jquery.json" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom\development-bundle\ui.widget.jquery.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="jquery\bootstrap-3.0.3-dist\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="jquery\bootstrap-3.0.3-dist\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="jquery\bootstrap-3.0.3-dist\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="jquery\bootstrap-3.0.3-dist\dist\fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49518/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

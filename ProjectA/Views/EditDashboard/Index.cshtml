@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Edit Dashboard";
+    Layout = "~/Views/Shared/_layoutMaster.cshtml";
+}
+<div id="widget-container" style="background-color:lightgray">
+    <div class="draggable" style="height:100px;width:100px;background-color:aliceblue">
+        i am draggable
+    </div>  
+</div>
+<script>
+    $('.draggable').draggable({ containment: '#widget-container', scroll: false, grid: [100, 100] });
+   
+         $('#widget-container')[0].style.height = screen.availHeight - 250 + 'px';
+    
+    </script>
